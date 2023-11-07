@@ -21,7 +21,20 @@ const cards = [
  * @param {array} cards
  * @return {string} displayVal
  */
-const cardsWorthTen = cards => {};
+const cardsWorthTen = cards => {
+  const allFfaceCards = cards.filter((card) => card.val === 10);
+  console.log('All face cards with 10 value are: ', allFfaceCards);
+
+  // Collect all face card values into an array
+  const faceCardsDisplayValuesArray = [];
+  for (let i = 0; i < allFfaceCards.length; i++) {
+    faceCardsDisplayValuesArray.push(allFfaceCards[i].displayVal);
+  }
+  console.log(faceCardsDisplayValuesArray);
+
+  // print face card display values separated by a ', '
+  console.log(faceCardsDisplayValuesArray.join(', '));
+};
 
 console.log(cardsWorthTen(cards));
 // should return/log "10, Jack, Queen, King"
