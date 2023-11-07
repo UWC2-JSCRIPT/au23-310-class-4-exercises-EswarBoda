@@ -58,4 +58,11 @@ const cards = [
  *
  * @param {array} deck A deck of cards
  */
-const logCardDeck = deck => {};
+const logCardDeck = deck => {
+  console.log('No.of cards in the deck: ', cards.length);
+  //cards.forEach(card => console.log(`The ${card.displayVal} of ${card.suit} has a value of ${card.val}`));
+  for (let i = 0; i < deck.length; i++) {
+    console.log(`The ${deck[i].displayVal} of ${deck[i].suit} has a value of ${deck[i].val}`);
+  }
+};
+logCardDeck(cards);
